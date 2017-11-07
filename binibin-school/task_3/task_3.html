@@ -5,7 +5,14 @@
     <title>IFE JavaScript Task 01</title>
   </head>
 <body>
-
+<p><strong>任务目的</strong><hr />
+在上一任务基础上继续JavaScript的体验
+接触一下JavaScript中的高级选择器
+学习JavaScript中的数组对象遍历、读写、排序等操作
+学习简单的字符串处理操作<br />
+<strong>任务描述</strong><hr />
+参考以下示例代码，读取页面上已有的source列表，从中提取出城市以及对应的空气质量
+将数据按照某种顺序排序后，在resort列表中按照顺序显示出来</p><hr />
   <ul id="source">
     <li>北京空气质量：<b>90</b></li>
     <li>上海空气质量：<b>70</b></li>
@@ -27,40 +34,42 @@
   <button id="sort-btn">排序</button>
 
 <script type="text/javascript">
+	
 function getData(){
   var source = document.getElementById("source");
   var city = source.getElementsByTagName("li");
   var dataArr = []
   for (i=0;i<city.length;i++){
   	dataArr.push(city[i].textContent) ;
-  	console.log(dataArr[i].substring(dataArr[i].indexOf("：")+1))
   }
   sortData(dataArr)
-  console.log(dataArr)
   return dataArr;
 }
+
 function sortData(array){
 	array.sort(function(value1,value2){
 		return parseInt( value1.substring(value1.indexOf("：")+1))-parseInt( value2.substring(value2.indexOf("：")+1))
 	})
 }
+
 function addList(array){
 	var chineseNum = ["一", "二", "三", "四", "五", "六","七"];
 	var getul = document.getElementById("resort");
 	for(var i=0; i<array.length; i++){
 		var newli = document.createElement("li");
 		getul.appendChild(newli);
-		console.log(array[i])
 		var textnode = document.createTextNode("第"+chineseNum[i]+"名："+array[i])
 		newli.appendChild(textnode);}
 		
 }
+
 function init() {
 	var button = document.getElementById("sort-btn");
 	button.onclick = function(){
 		addList(getData());
 	}
 }
+
 init();
 </script>
 </body>
