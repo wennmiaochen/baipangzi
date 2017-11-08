@@ -1,0 +1,18 @@
+.num-block{
+	background-color: hotpink; 
+	width: 28px; 
+	float: left;
+	padding: 10px; 
+	margin: 10px;
+	text-align: center;
+	border-radius:10px;
+}
+
+#content{
+	background-color: beige;
+	position: absolute;
+	margin: 20px;
+	height: auto;
+	border:1px dashed lightskyblue;
+	border-radius: 15px;
+}
