@@ -1,0 +1,13 @@
+/*静态伪类*/
+a:link{color: green;}
+a:visited{color: red;}
+/*动态伪类,注意顺序*/
+a:hover{color: blueviolet; font-size: 20px;}
+a:active{color: palevioletred;}
+input:focus {background: yellow; font-weight: bold;}
+p:first-child {font-weight: bold;}
+li:first-child {text-transform: uppercase;}
+p:first-letter {color: deeppink;font-size: 50px;}
+
+h1:before {content: "^";color: salmon;}
+h1:after {content: "end.";}

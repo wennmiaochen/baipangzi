@@ -1,0 +1,7 @@
+h1 + p {color: mediumspringgreen; font-style: italic;}
+p {color: gray;background: lightpink!important;font-style: normal;}
+*.aside {color: black;background: silver;}
+
+h2 {color: purple;}
+h2:after {content: "!";color: salmon;}
+h2 + p {color: black; }

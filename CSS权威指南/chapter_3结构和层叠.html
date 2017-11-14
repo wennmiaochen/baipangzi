@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>结构和层叠</title>
+		<link rel="stylesheet" href="css/chapter3.css" />
+	</head>
+	<body>
+		<h2>特殊性</h2>
+		<h1>Greetings!</h1>
+		<p class="aside">it's a fine day</p>
+		<p>it's a fine day</p>
+		
+		<h1>Salutations!</h1>
+		<p >it's a fine day</p>
+		<p class="aside">it's a fine day</p>
+		
+		<h2>继承</h2>
+		<p>继承值完全没有特殊性</p>
+		<p>样式不仅应用到指定元素，还会影响他的后代。</p>
+		<p>元素不会把值向上传递到其祖先，但是有一个例外</p>
+		<p><strong>body元素的背景样式可以传递到Html,相应的也可以定义其画布</strong></p>
+		<h3>也有属性不会继承:</h3>
+		<p><em>border,内外边距，背景</em></p>
+		<h2>按权重和来源排序</h2>
+		<img src="img/2.png" />
+		<h2>按特殊性排序</h2>
+		<h2>按顺序排序</h2>
+		<img src="img/3.png" />
+	</body>
+</html>
